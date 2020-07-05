@@ -6,9 +6,10 @@ def decodeMorse(morse_code):
     for counter in range(0,len(characterList)):
         if characterList[counter] == '&':
             words = words + ' '
-        else:
-            words = words + MORSE_CODE[characterList[counter]]
+        #else:
+            #words = words + MORSE_CODE[characterList[counter]]
     
     return words
 
 decodeMorse('.... . -.--   .--- ..- -.. .')
+
