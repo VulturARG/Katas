@@ -1,4 +1,4 @@
-def check_bracket_open_close(string):
+def check_symbol_open_close(string):
     open_symbol = ['(','{','[']
     close_symbol = [')','}',']']
     
@@ -16,7 +16,7 @@ def check_bracket_open_close(string):
                 string = '';
             if len(new_string) == 0 and len(string) == 0: return True
             if len(new_string) %  2 !=0: return False
-            check = check_bracket_open_close(new_string)
+            check = check_symbol_open_close(new_string)
             if not check: return False
         else:
             return False
