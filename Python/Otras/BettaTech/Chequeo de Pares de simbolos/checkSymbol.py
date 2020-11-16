@@ -34,3 +34,18 @@ def find_right_symbol(string, previus_symbol, search_symbol):
     return -1
 
 
+def scan(str):
+  pairs = {
+      '{': '}',
+      '[': ']',
+      '(': ')',
+  }
+  stack = []
+  for char in str:
+    if char in pairs:
+      stack.append(pairs[char])
+    elif len(stack) == 0 or (stack.pop() != char):
+      return False
+  return len(stack) == 0
+
+print(scan("[()]{}{[()()]()}"))
